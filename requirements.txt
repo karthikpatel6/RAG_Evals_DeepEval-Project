@@ -1,0 +1,12 @@
+langchain-groq
+langchain-google-genai
+langchain-chroma
+langchain-google-genai
+pinecone-client
+langchain-text-splitters
+langchain-core
+chromadb
+sentence-transformers
+deepeval
+pytest
+python-dotenv
