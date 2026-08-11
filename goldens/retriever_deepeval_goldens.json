@@ -1,0 +1,92 @@
+[
+  {
+    "id": "g001",
+    "query": "How is repeat LLME VALS session reframed?",
+    "ideal_answer": "The repeat LLME VALS session has been reframed with a different explanation, which is expected to be understood better than the original session.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g002",
+    "query": "Compare retriever's performance with and without re-ranking.",
+    "ideal_answer": "Without re-ranking, the retriever's performance is measured by its ability to retrieve the correct answer within the top K documents. In this case, if K is 5, the retriever is considered successful if the correct answer is among the top 5 documents retrieved. With re-ranking, the retriever's performance would be re-evaluated after re-ranking the documents, potentially improving the accuracy of the retrieved results.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g003",
+    "query": "Suppose LLME evaluates two paragraphs, how?",
+    "ideal_answer": "LLME (likely a machine learning model or evaluation method) can compare two paragraphs by analyzing their semantic meaning, syntax, and content to determine if they convey the same information, despite potential differences in wording or structure.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g004",
+    "query": "Examine SQLite integration for IPL 2020-2024 dataset optimization.",
+    "ideal_answer": "For optimizing the IPL 2020-2024 dataset, SQLite integration is achieved through the `db.py` file, which contains code to read the `Deliveries.csv` and `matches.csv` files and load the data into an SQLite database.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g005",
+    "query": "Compare MMLU to other benchmarks for measuring LLM knowledge.",
+    "ideal_answer": "MMLU is a benchmark with 14,000 MCQs across 57 subjects, used to test LLM knowledge. Unlike other benchmarks, MMLU initially provided a comprehensive assessment, but its public nature led to contamination, where questions became part of subsequent LLM training data, reducing its effectiveness over time.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g006",
+    "query": "Compare KL & R.",
+    "ideal_answer": "KL (Knowledge) and R (Reasoning) are two key capabilities. Knowledge refers to the information a model possesses, while Reasoning is the ability to analyze and draw conclusions from that knowledge. Both are crucial, as Knowledge without Reasoning is incomplete, and Reasoning without Knowledge is pointless. Frontier Labs focuses on these capabilities to evaluate a model's intelligence.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g007",
+    "query": "Suppose a model memorized 9000 Q&As, how would contamination affect its performance?",
+    "ideal_answer": "The model's performance would be contaminated because it has memorized the answers, making it uncertain whether it's actually thinking or just recalling from its training data. This contamination would lead to inaccurate assessments of its true abilities.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g008",
+    "query": "Compare MMLU's criteria to HLE benchmark.",
+    "ideal_answer": "MMLU's criteria was less strict compared to the HLE benchmark, requiring only 4 options, connection to a particular field, and a reliable source, whereas the HLE benchmark is a stronger criteria with a potential prize for selected questions.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g009",
+    "query": "Optimize API hit using model slugs.",
+    "ideal_answer": "To optimize API hits, using model slugs like \"sonnet 5\" as seen in Open Router, can efficiently direct queries to the correct models.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g010",
+    "query": "Compare 1st and 2nd sessions.",
+    "ideal_answer": "The first and second sessions are similar for the first half hour, but after that, the second session will be significantly different from the first one, with new content and improvements.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g011",
+    "query": "Compare costs of adding a new feature to ESPN crick info vs other sites.",
+    "ideal_answer": "Adding a new feature to ESPN crick info would likely be more costly compared to other sites due to its large global user base and high traffic volume, requiring more robust infrastructure and scalability to handle the increased load.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g012",
+    "query": "What are key LLM app components: UI, prompts, APIs, code, guardrails?",
+    "ideal_answer": "Yes, key LLM app components include UI, prompts, APIs, code, and guardrails, as well as output parsers, memory, and context.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g013",
+    "query": "Will the next LLMEval session cover model or application level evals, or loop engineering?",
+    "ideal_answer": "The next LLMEval session will most likely cover loop engineering, as the instructor mentioned there's a 90% chance of teaching loop engineering instead of LLMEval.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g014",
+    "query": "If AI engineers self-evaluate, who else can?",
+    "ideal_answer": "Frontier labs and third-party evaluators can also evaluate and benchmark AI models, in addition to AI engineers who self-evaluate.",
+    "source": "TODO-verify"
+  },
+  {
+    "id": "g015",
+    "query": "If a model tops a combined leaderboard, what does it reveal about its overall capabilities?",
+    "ideal_answer": "If a model tops a combined leaderboard, it reveals that the model performs well across multiple benchmarks and evaluation dimensions, such as knowledge, reasoning, mathematics, coding, and data analysis, indicating its strong overall capabilities.",
+    "source": "TODO-verify"
+  }
+]
