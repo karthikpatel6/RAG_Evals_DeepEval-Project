@@ -9,7 +9,7 @@ from src.rag_pipeline import RagPipeline
 load_dotenv()
 
 GOLDEN_PATH = "goldens/correctness_goldens.json"
-JUDGE_PATH = "llama-3.3-70b-versatile"
+JUDGE_MODEL = "llama-3.3-70b-versatile"
 THRESHOLD = 0.7
 
 with open(GOLDEN_PATH) as f:
@@ -46,7 +46,28 @@ correctness = GEval(
     ],
     evaluation_params=[LLMTestCaseParams.INPUT, LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT],
     threshold=THRESHOLD,
-    model=JUDGE_PATH,
+    model=JUDGE_MODEL,
+    strict_mode=False,
+)
+
+# Completeness
+completeness = GEval(
+    name="Completeness",
+    evaluation_steps=[
+        "Identify the key points contained in the expected output.",
+        "Check how many of those key points are addressed in the actual output.",
+        "Penalizes the actual output for each key point from the expected output that it omits or only partially covers.",
+        "Judge coverage only. Do NOT lower the score because a covered point is stated incorrectly - factual correctness is judged separately.",
+        "Do NOT penalize the actual output for adding extra information beyond the expected output.",
+    ],
+    rubric=[
+        Rubric(score_range=(9, 10), expected_outcome="Addresses essentially all key points in the expected output."),
+        Rubric(score_range=(5, 8),  expected_outcome="Covers the main key points but misses one or more."),
+        Rubric(score_range=(0, 4),  expected_outcome="Misses several key points; only partially covers the expected output."),
+    ],
+    evaluation_params=[LLMTestCaseParams.INPUT, LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT],
+    threshold=THRESHOLD,
+    model=JUDGE_MODEL,
     strict_mode=False,
 )
 
