@@ -53,6 +53,9 @@ Each `evals/*.py` file focuses on a specific metric or evaluation goal:
 - `evals/eval_scope.py` — scope adherence to ensure the assistant stays inside its role
 - `evals/eval_leakage.py` — prompt leakage, course-content leakage, and PII leakage checks
 - `evals/eval_toxicity.py` — toxicity evaluation for generated answers
+ - `evals/eval_latency.py` — measures response latency and pipeline timing characteristics
+ - `evals/eval_cost.py` — estimates API/model cost for evaluation runs and per-query cost
+ - `evals/eval_reliability.py` — checks stability and repeatability of answers across runs
 
 ---
 
@@ -166,6 +169,25 @@ This checks whether the generated answer contains abusive, hateful, threatening,
 
 ---
 
+### 7. Latency
+
+Handled in `evals/eval_latency.py`.
+
+This measures end-to-end response latency and timing breakdowns across the pipeline (retrieval, rerank, generation). It's useful for spotting performance regressions and understanding per-query time costs.
+
+### 8. Cost
+
+Handled in `evals/eval_cost.py`.
+
+This estimates model/API cost for evaluation runs and provides per-query cost approximations to help balance quality against budget.
+
+### 9. Reliability
+
+Handled in `evals/eval_reliability.py`.
+
+This checks the stability and repeatability of generated answers across multiple runs and random seeds, helping identify brittle or nondeterministic behavior.
+
+
 ## Why this project matters
 
 The key idea is to move beyond “does the model answer something vaguely plausible?” and instead ask:
@@ -266,6 +288,9 @@ python -m evals.eval_application
 python -m evals.eval_scope
 python -m evals.eval_leakage
 python -m evals.eval_toxicity
+python -m evals.eval_latency
+python -m evals.eval_cost
+python -m evals.eval_reliability
 ```
 
 These scripts use `DeepEval` to score the model answers against the golden datasets and evaluation metrics.
