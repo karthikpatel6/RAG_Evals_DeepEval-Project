@@ -6,6 +6,28 @@ This repository was designed as a practical evaluation sandbox for a Retrieval-A
 
 ---
 
+## Current evaluation results
+
+The current benchmark results for the course-assistant RAG pipeline are:
+
+- Recall: 98%
+- Precision: 85%
+- Faithfulness: 93%
+- Answer Relevancy: 90%
+- Contextual Relevancy: 83%
+- Correctness: 83%
+- Completeness: 75%
+- Style: 74%
+- Toxicity: 0
+- PII Leakage: 96% success
+- Scope Adherence: 99%
+- Latency (P95): 5.2 seconds
+- Cost per query: 2 paise
+
+These results indicate strong retrieval quality, high faithfulness, and excellent scope and safety performance, while highlighting opportunities to improve completeness, style quality, and contextual relevance in the generated answers.
+
+---
+
 ## What this project does
 
 The project creates a full RAG workflow:
